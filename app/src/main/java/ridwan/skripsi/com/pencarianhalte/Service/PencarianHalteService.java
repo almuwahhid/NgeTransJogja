@@ -97,10 +97,11 @@ public class PencarianHalteService{
         JSONObject object_arah = array_arah.getJSONObject(0);
         arah.setId_halte_asal(Integer.valueOf(object_arah.getString("id_halte_asal")));
         arah.setId_halte_tujuan(Integer.valueOf(object_arah.getString("id_halte_tujuan")));
+        arah.setNama_trayek(object_arah.getString("trayek"));
 //        arah.setId_trayek(Integer.valueOf(object_arah.getString("id_trayek")));
 //        arah.setUrutan_asal(Integer.valueOf(object_arah.getString("urutan_asal")));
         arah.setNama_halte_asal(object_arah.getString("nama_halte_asal"));
-        arah.setNama_halte_tujuan(object_arah.getString("nama_halte_tujuan"));
+//        arah.setNama_halte_tujuan(object_arah.getString("nama_halte_tujuan"));
 //        arah.setNama_trayek(object_arah.getString("nama_trayek"));
     }
     public Arah getArah() {

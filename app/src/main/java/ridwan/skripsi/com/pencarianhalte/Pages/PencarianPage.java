@@ -68,6 +68,8 @@ public class PencarianPage extends Fragment implements View.OnClickListener, Goo
     protected LinearLayout progress_page_info;
     @Bind(R.id.pencarian_result_layout)
     protected LinearLayout result_layout;
+    @Bind(R.id.list_header_txt)
+    protected TextView list_header_txt;
 //    @Bind(R.id.pencarian_list_result_layout) protected LinearLayout list_result_layout;
 
     //    @Bind(R.id.pencarian_list_result_lv) protected ListView list_result_lv;
@@ -201,6 +203,7 @@ public class PencarianPage extends Fragment implements View.OnClickListener, Goo
                     setJalurs(jalurs);
                     result_layout.setVisibility(View.VISIBLE);
                     directionRuteService = new DirectionRuteService(getActivity(), directionAsalCallback, myLocation.getLatitude(), myLocation.getLongitude(), jalurs.get(0).getLat_halte(), jalurs.get(0).getLng_halte());
+                    list_header_txt.setText(arah.getNama_trayek());
 //                    initKomponen(arah);
                     initRecycler();
                 }else if(status==2){

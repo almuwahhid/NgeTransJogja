@@ -168,15 +168,17 @@
                 </LinearLayout>
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:orientation="vertical">
             <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/bar_height"
                 android:id="@+id/pencarian_result_rv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-        </LinearLayout>
+            <include layout="@layout/daftar_halte_header" />
+        </RelativeLayout>
     </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>
